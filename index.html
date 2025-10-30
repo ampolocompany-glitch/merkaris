@@ -6,71 +6,58 @@
   <title>Globalny Konsulting</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white; /* белый фон */
-      font-family: sans-serif;
-    }
-
-    .card {
-      max-width: 400px;
-      width: 90%;
-      background-color: rgba(0,0,0,0.05); /* легкий черный фон */
-      border: 1px solid #333;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      text-align: center;
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 1rem;
-      background-color: black; /* здесь вставишь свой логотип */
-      border-radius: 0.5rem;
-    }
-
-    .fadeIn {
+    body { perspective: 1000px; }
+    .fade-up {
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 0.8s forwards;
     }
-
+    .fade-up-delay-1 { animation-delay: 0.4s; }
+    .fade-up-delay-2 { animation-delay: 0.6s; }
+    .fade-up-delay-3 { animation-delay: 0.8s; }
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body>
-  <div class="card fadeIn">
-    <div class="logo"></div> <!-- сюда потом вставишь логотип -->
+<body class="min-h-screen flex items-center justify-center bg-black font-sans">
+  <div class="max-w-3xl w-11/12 bg-white border border-zinc-800 rounded-2xl p-8 shadow-2xl fade-up">
+    <!-- Логотип сверху -->
+    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center rounded-xl font-bold text-black mx-auto mb-6">
+      GK
+    </div>
 
-    <h1 class="text-2xl font-semibold mb-2">Globalny Konsulting</h1>
-    <p class="text-gray-700 mb-4">Pośrednictwo w handlu międzynarodowym</p>
+    <h1 class="text-3xl font-semibold tracking-wide text-green-400 mb-1 text-center">Globalny Konsulting</h1>
+    <p class="text-green-500 font-medium text-center mb-6">Pośrednictwo w handlu międzynarodowym</p>
 
-    <p class="text-gray-800 mb-4">
+    <p class="text-zinc-800 mb-6 fade-up fade-up-delay-1">
       <strong>O nas:</strong> Jesteśmy firmą specjalizującą się w pośrednictwie handlu międzynarodowego — łączymy dostawców i odbiorców, organizujemy logistykę oraz wsparcie negocjacji.
     </p>
 
-    <div class="grid gap-4 mb-4">
-      <div><strong>Telefon:</strong> <a href="tel:+48123456789" class="text-black">+48 123 456 789</a></div>
-      <div><strong>Email:</strong> <a href="mailto:kontakt@globalnykonsulting.pl" class="text-black">kontakt@globalnykonsulting.pl</a></div>
-      <div><strong>Adres:</strong> ul. Przykładowa 10, 00-001 Warszawa, Polska</div>
-      <div><strong>NIP:</strong> 123-456-78-90</div>
+    <div class="grid gap-4 sm:grid-cols-2 fade-up fade-up-delay-2">
+      <div class="bg-zinc-100 border border-zinc-300 rounded-xl p-4 hover:border-green-500 transition-colors">
+        <strong>Telefon:</strong><br />
+        <a href="tel:+48123456789" class="hover:text-green-300 transition-colors">+48 123 456 789</a>
+      </div>
+      <div class="bg-zinc-100 border border-zinc-300 rounded-xl p-4 hover:border-green-500 transition-colors">
+        <strong>Email:</strong><br />
+        <a href="mailto:kontakt@globalnykonsulting.pl" class="hover:text-green-300 transition-colors">kontakt@globalnykonsulting.pl</a>
+      </div>
+      <div class="bg-zinc-100 border border-zinc-300 rounded-xl p-4 hover:border-green-500 transition-colors">
+        <strong>Adres:</strong><br />ul. Przykładowa 10, 00-001 Warszawa, Polska
+      </div>
+      <div class="bg-zinc-100 border border-zinc-300 rounded-xl p-4 hover:border-green-500 transition-colors">
+        <strong>NIP:</strong><br />123-456-78-90
+      </div>
     </div>
 
-    <p class="text-gray-600 text-sm">
+    <p class="text-sm text-zinc-500 mt-6 fade-up fade-up-delay-3">
       Specjalizacje: pośrednictwo handlowe, doradztwo eksport/import, organizacja transportu. Działamy na rynkach UE, Azji i Bliskiego Wschodu.
     </p>
   </div>
 </body>
 </html>
+
 
 
 
