@@ -1,0 +1,65 @@
+import { motion } from 'framer-motion'
+
+export default function Wizytowka() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-black text-green-400 font-sans">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl w-11/12 bg-zinc-900/70 border border-zinc-800 rounded-2xl p-8 shadow-2xl"
+      >
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center rounded-xl font-bold text-black">
+            GK
+          </div>
+          <div>
+            <h1 className="text-3xl font-semibold tracking-wide">Globalny Konsulting</h1>
+            <p className="text-green-500 font-medium">Pośrednictwo w handlu międzynarodowym</p>
+          </div>
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-zinc-300 mb-6"
+        >
+          <strong>O nas:</strong> Jesteśmy firmą specjalizującą się w pośrednictwie handlu międzynarodowego — łączymy dostawców i odbiorców, organizujemy logistykę oraz wsparcie negocjacji.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="grid gap-4 sm:grid-cols-2"
+        >
+          <div className="bg-zinc-800/40 border border-zinc-700 rounded-xl p-4 hover:border-green-500 transition-colors">
+            <strong>Telefon:</strong><br />
+            <a href="tel:+48123456789" className="hover:text-green-300 transition-colors">+48 123 456 789</a>
+          </div>
+          <div className="bg-zinc-800/40 border border-zinc-700 rounded-xl p-4 hover:border-green-500 transition-colors">
+            <strong>Email:</strong><br />
+            <a href="mailto:kontakt@globalnykonsulting.pl" className="hover:text-green-300 transition-colors">kontakt@globalnykonsulting.pl</a>
+          </div>
+          <div className="bg-zinc-800/40 border border-zinc-700 rounded-xl p-4 hover:border-green-500 transition-colors">
+            <strong>Adres:</strong><br />ul. Przykładowa 10, 00-001 Warszawa, Polska
+          </div>
+          <div className="bg-zinc-800/40 border border-zinc-700 rounded-xl p-4 hover:border-green-500 transition-colors">
+            <strong>NIP:</strong><br />123-456-78-90
+          </div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="text-sm text-zinc-500 mt-6"
+        >
+          Specjalizacje: pośrednictwo handlowe, doradztwo eksport/import, organizacja transportu. Działamy na rynkach UE, Azji i Bliskiego Wschodu.
+        </motion.p>
+      </motion.div>
+    </div>
+  )
+}
+	
